@@ -1,4 +1,4 @@
-# LIN3-TCR
+# LIN3-TCR-5 > Andyihsan
 BOT Chivas Edited V.2 Login Token / Link
 
 Catatan : 
@@ -12,7 +12,7 @@ Cara Install Via Android :
 - pip2 install thrift==0.9.3<br>
 - pkg install git<br>
 - pkg install nano<br>
-- git clone https://github.com/andyihsan/LIN3-TCR<br>
+- git clone https://github.com/moonkun123/LIN3-TCR-5<br>
 - Selesai
 
 Cara Membuka/Mengedit File :
