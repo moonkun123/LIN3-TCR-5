@@ -24,28 +24,13 @@ kc.login(qr=True)
 ks = LINETCR.LINE()
 ks.login(qr=True)
 
-ka = LINETCR.LINE()
-ka.login(qr=True)
-
-kb = LINETCR.LINE()
-kb.login(qr=True)
-
-ko = LINETCR.LINE()
-ko.login(qr=True)
-
-ke = LINETCR.LINE()
-ke.login(qr=True)
-
-ku = LINETCR.LINE()
-ku.login(qr=True)
-
 cl
 
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [R.A] BOT Menu V.3  􀔃􀄆red check mark􏿿
+helpMessage =""" MZ BOT Menu V.3  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
 [Me]       Cek Akun Sendiri
@@ -76,7 +61,7 @@ helpMessage =""" [R.A] BOT Menu V.3  􀔃􀄆red check mark􏿿
 [Kick mid] Kick Via mid
 [Ayo masuk] Invite Semua Bot
 [_namabot join] Invite Bot
-[Bye_namabot]  Leave Bot
+[Bye _namabot]  Leave Bot
 """
 
 Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
@@ -90,20 +75,15 @@ Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
 [No Joinned]
 -- Joinn on/off
 """
-KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
-DEF=[ka,kb,ko,ke,ku]
+KAC=[cl,ki,kk,kc,ks]
+DEF=[cl,ki,kk,kc,ks]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Dmid = ks.getProfile().mid
-Emid = ka.getProfile().mid
-Fmid = kb.getProfile().mid
-Gmid = ko.getProfile().mid
-Hmid = ke.getProfile().mid
-Imid = ku.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,"uc03f8b4d3a35df715cbeeb06f2a33852"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=["uc03f8b4d3a35df715cbeeb06f2a33852"]
 wait = {
     'contact':False,
@@ -125,11 +105,6 @@ wait = {
     "cName3":"[R.A]_SX3 ",
     "cName4":"[R.A]_SX4 ",
     "cName5":"[R.A]_SX5 ",
-    "cName6":"[R.A]_SX6 ",
-    "cName7":"[R.A]_SX7 ",
-    "cName8":"[R.A]_SX8 ",
-    "cName9":"[R.A]_SX9 ",
-    "cName10":"[R.A]_SX10 ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -272,51 +247,7 @@ def bot(op):
                     X.preventJoinByTicket = True
                     ka.updateGroup(X)
                     Ti = ka.reissueGroupTicket(op.param1)
-                
-            if op.param3 in Fmid:
-                if op.param2 in Emid:
-                    X = ka.getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    ka.updateGroup(X)
-                    Ti = ka.reissueGroupTicket(op.param1)
-                    kb.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X.preventJoinByTicket = True
-                    kb.updateGroup(X)
-                    Ti = kb.reissueGroupTicket(op.param1)
-                
-            if op.param3 in Gmid:
-                if op.param2 in Fmid:
-                    X = kb.getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    kb.updateGroup(X)
-                    Ti = kb.reissueGroupTicket(op.param1)
-                    ko.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X.preventJoinByTicket = True
-                    ko.updateGroup(X)
-                    Ti = ko.reissueGroupTicket(op.param1)
-                
-            if op.param3 in Hmid:
-                if op.param2 in Gmid:
-                    X = ko.getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    ko.updateGroup(X)
-                    Ti = ko.reissueGroupTicket(op.param1)
-                    ke.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X.preventJoinByTicket = True
-                    ke.updateGroup(X)
-                    Ti = ke.reissueGroupTicket(op.param1)
-                    
-            if op.param3 in Imid:
-                if op.param2 in mid:
-                    X = cl.getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)
-                    ku.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X.preventJoinByTicket = True
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)        
-
+                        
         if op.type == 13:
             print op.param1
             print op.param2
